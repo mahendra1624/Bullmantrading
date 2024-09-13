@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullmantrading Trading</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans"> 
+  <!-- Navbar Section -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold text-gray-600">Bullmantrading</h1>
+          <!-- <img src="logo.png" alt="Logo" class="h-10"> -->
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="/" class="hover:text-green-500">Home</a>
+          <a href="/about.html" class="hover:text-green-500">About</a>
+          <a href="/sevice.html" class="hover:text-green-500">Service</a>
+          <a href="/pricing.html" class="hover:text-green-500">Pricing</a>
+          <a href="#" class="hover:text-green-500">Payment</a>
+          <a href="#" class="hover:text-green-500">Disclaimer</a>
+          <a href="#" class="hover:text-green-500">Contact Us</a>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="text-green-600 hover:text-green-500 mr-4" onclick="openLoginModal()">LOGIN</a>
+          <!-- Hamburger Icon for Mobile -->
+          <button class="md:hidden block text-green-600 focus:outline-none" id="navToggle">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-lg max-w-md w-full">
+      <!-- Company Name -->
+      <h2 class="text-2xl font-bold mb-4 text-center text-blue-700">Bullmantrading</h2>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+          <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+              <input id="email" type="email" placeholder="Enter your email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+              <input id="password" type="password" placeholder="Enter your password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="flex items-center justify-between">
+              <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                  Log In
+              </button>
+              <a class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-600" href="#">
+                  Forgot Password?
+              </a>
+          </div>
+      </form>
+
+      <!-- Close Button -->
+      <div class="mt-4 text-center">
+          <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onclick="closeLoginModal()">Close</button>
+      </div>
+  </div>
+</div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobileMenu">
+      <a href="/" class="hover:text-green-500">Home</a>
+          <a href="/about.html" class="hover:text-green-500">About</a>
+          <a href="/sevice.html" class="hover:text-green-500">Service</a>
+          <a href="/pricing.html" class="hover:text-green-500">Pricing</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Payment</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Disclaimer</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="relative h-screen bg-cover bg-center" style="background-image: url('./img/bull-bear1.jpeg');">
+    <!-- Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Centered Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+        <!-- About Us Content -->
+        <h1 class="text-5xl font-bold mb-4">Pricing</h1>
+        <!-- Navigation Links -->
+        <nav class="text-lg">
+            <a href="/" class="hover:text-gray-400">Home</a> / 
+            <a href="/pricing.html" class="hover:text-gray-400">Pricing</a>
+        </nav>
+    </div>
+  </div>
+
+
+  <section>
+    <div class="container mx-auto py-8">
+      <!-- Icon Tabs -->
+      <div class="flex justify-center mb-8">
+        <button class="tab-btn bg-blue-600 text-white p-4 border border-2 border-gray-400 " data-target="content-1">Algo Pricing</button>
+        <button class="tab-btn text-gray-500 p-4 border border-2 border-gray-400" data-target="content-2">IT Pricing</button>
+      </div>
+  
+      <!-- Content for each tab -->
+      <div id="content-1" class="tab-content mx-8 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 p-4">
+          <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Card Body -->
+            <div class="p-6 text-center">
+                <!-- Monthly Price -->
+                <h2 class="text-2xl font-bold mb-2">Monthly</h2>
+                <p class="text-4xl font-bold mb-2">₹11,999 <span class="text-lg font-normal">+ GST</span></p>
+        
+                <!-- Check Icon and Features -->
+                <ul class="space-y-2 my-6">
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">Completely Automated</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">Trades Indices</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">1 Strategy Coding</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">WhatsApp Support</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Remote Support</span>
+                  </li>
+                </ul>
+        
+                <!-- Buy Now Button -->
+                <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <!-- Card Body -->
+          <div class="p-6 text-center">
+              <!-- Quarterly Price -->
+              <h2 class="text-2xl font-bold mb-2">Quarterly</h2>
+              <p class="text-4xl font-bold mb-2">₹28,999 <span class="text-lg font-normal">+ GST</span></p>
+      
+              <!-- Check Icon and Features -->
+              <ul class="space-y-2 my-6">
+                <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Completely Automated</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Trades Indices</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">2 Strategy Coding</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">WhatsApp Support</span>
+              </li>
+              <li class="flex items-center justify-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                <span class="text-gray-600">Remote Support</span>
+            </li>
+            <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">Rs 1,000 per month maintenance charge</span>
+          </li>
+              </ul>
+      
+              <!-- Buy Now Button -->
+              <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
+                  Buy Now
+              </button>
+          </div>
+      </div>
+      <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <!-- Card Body -->
+        <div class="p-6 text-center">
+            <!-- Half yearlyPrice -->
+            <h2 class="text-2xl font-bold mb-2">Half yearly</h2>
+            <p class="text-4xl font-bold mb-2">₹49,999 <span class="text-lg font-normal">+ GST</span></p>
+    
+            <!-- Check Icon and Features -->
+            <ul class="space-y-2 my-6">
+              <li class="flex items-center justify-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                <span class="text-gray-600">Completely Automated</span>
+            </li>
+            <li class="flex items-center justify-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                <span class="text-gray-600">Trades Indices</span>
+            </li>
+            <li class="flex items-center justify-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                <span class="text-gray-600">3-4 Strategy Coding</span>
+            </li>
+            <li class="flex items-center justify-center">
+                <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                <span class="text-gray-600">WhatsApp Support</span>
+            </li>
+            <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">Remote Support</span>
+          </li>
+          <li class="flex items-center justify-center">
+            <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+            <span class="text-gray-600">Rs 1,000 per month maintenance charge</span>
+        </li>
+            </ul>
+    
+            <!-- Buy Now Button -->
+            <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
+                Buy Now
+            </button>
+        </div>
+    </div>
+    <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Card Body -->
+      <div class="p-6 text-center">
+          <!-- Monthly Price -->
+          <h2 class="text-2xl font-bold mb-2">Yearly</h2>
+          <p class="text-4xl font-bold mb-2">₹69,999 <span class="text-lg font-normal">+ GST</span></p>
+  
+          <!-- Check Icon and Features -->
+          <ul class="space-y-2 my-6">
+            <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">Completely Automated</span>
+          </li>
+          <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">Trades Indices</span>
+          </li>
+          <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">All Strategy Coding</span>
+          </li>
+          <li class="flex items-center justify-center">
+              <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+              <span class="text-gray-600">WhatsApp Support</span>
+          </li>
+          <li class="flex items-center justify-center">
+            <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+            <span class="text-gray-600">Remote Support</span>
+        </li>
+        <li class="flex items-center justify-center">
+          <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+          <span class="text-gray-600">Rs 1,000 per month maintenance charge</span>
+      </li>
+          </ul>
+  
+          <!-- Buy Now Button -->
+          <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
+              Buy Now
+          </button>
+      </div>
+  </div>   
+        </div>
+      </div>
+  
+      <div id="content-2" class="tab-content hidden mx-8 p-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+          <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Card Body -->
+            <div class="p-6 text-center">
+                <!-- Monthly Price -->
+                <h2 class="text-2xl font-bold mb-2">Digital Marketing</h2>
+                <p class="text-4xl font-bold mb-2">₹12,000 </p>
+        
+                <!-- Check Icon and Features -->
+                <ul class="space-y-2 my-6">
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">Content strategy</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">⁠Account handling</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">Instagram & Facebook & google business profile</span>
+                    </li>
+                    <li class="flex items-center justify-center">
+                        <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                        <span class="text-gray-600">⁠15 contents ( 8 reel & 7 post )</span>
+                    </li>
+                </ul>
+                <div class="border-b-2 border-gray-200"></div>
+                <h2 class="text-2xl font-bold mb-2 py-4">Linkedin Marketing</h2>
+                <p class="text-4xl font-bold mb-2">₹10,000 </p>
+                <ul class="space-y-2 my-6">
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Content strategy</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">⁠Account handling</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Instagram & Facebook & google business profile</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">⁠15 contents ( 8 reel & 7 post )</span>
+                  </li>
+              </ul>
+              <div class="border-b-2 border-gray-200"></div>
+            </div>
+        </div>
+        <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <!-- Card Body -->
+          <div class="p-6 text-center">
+              <!-- Monthly Price -->
+              <h2 class="text-2xl font-bold mb-2">SEO</h2>
+              <h5 class="text-xl font-normal mb-2">(SEARCH ENGINE OPTIMIZATION)</h5>
+              <p class="text-4xl font-bold mb-2">₹15,000 </p>
+              <h3 class="text-2xl font-bold mb-2 py-4 mt-4 border border-2 bg-blue-300">On Page- (Technical Process)</h3>
+      
+              <!-- Check Icon and Features -->
+              <ul class="space-y-2 my-6">
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Sample text repeated 1</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Sample text repeated 2</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Sample text repeated 3</span>
+                  </li>
+                  <li class="flex items-center justify-center">
+                      <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                      <span class="text-gray-600">Sample text repeated 4</span>
+                  </li>
+              </ul>
+      
+              <div class="border-b-2 border-gray-200"></div>
+              <h2 class="text-2xl font-bold mb-2 py-4 mt-4 border border-2 bg-blue-300">Off Page: - (Link Building Process)</h2>
+              <ul class="space-y-2 my-6">
+                <li class="flex items-center justify-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                    <span class="text-gray-600">Content strategy</span>
+                </li>
+                <li class="flex items-center justify-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                    <span class="text-gray-600">⁠Account handling</span>
+                </li>
+                <li class="flex items-center justify-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                    <span class="text-gray-600">Instagram & Facebook & google business profile</span>
+                </li>
+                <li class="flex items-center justify-center">
+                    <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                    <span class="text-gray-600">⁠15 contents ( 8 reel & 7 post )</span>
+                </li>
+            </ul>
+            <div class="border-b-2 border-gray-200"></div>
+          </div>
+      </div>
+      
+    <div class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+      <!-- Card Body -->
+      <div class="p-6 text-center">
+          <!-- Monthly Price -->
+          <h2 class="text-2xl font-bold mb-2">Web Design And Development</h2>
+          <p class="text-4xl font-bold mb-2">₹8,000</p>
+  
+          <!-- Check Icon and Features -->
+          <ul class="space-y-2 my-6">
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Sample text repeated 1</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Sample text repeated 2</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Sample text repeated 3</span>
+              </li>
+              <li class="flex items-center justify-center">
+                  <i class="fas fa-check-circle text-green-500 text-2xl mr-2"></i>
+                  <span class="text-gray-600">Sample text repeated 4</span>
+              </li>
+          </ul>
+  
+          <!-- Buy Now Button -->
+          <button class="bg-green-500 text-white font-bold py-2 px-4 rounded-full hover:bg-green-600">
+              Buy Now
+          </button>
+      </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<div class="background-section">
+  <div class="overlay-content">
+      <h2 class="max-w-4xl text-5xl font-bold mb-4">What type of challenge are you facing?
+        Let’s talk</h2>
+  </div>
+</div>
+<!-- footer start -->
+<footer class="bg-[#212529] text-white pt-12">
+  <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 px-6">
+
+      <!-- Column 1: Logo & Info -->
+      <div class="col-span-2">
+        <h1 class="text-3xl font-bold text-gray-200 mb-4">Bullmantrading</h1>          
+          <p>Being Strategic, Our developer is sufficiently skilled to trick the software and have the necessary programming and well back testing capacity. 👣</p>
+         
+      </div>
+
+      <!-- Column 2: Newsletter -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Newsletter</h2>
+          <p class="mb-4">Be the first to access new product drops, exclusive promotions, and exciting giveaways!</p>
+          <div class="flex items-center">
+              <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-md w-full focus:outline-none">
+              <button class="bg-gray-800 text-white px-4 py-2 rounded-r-md flex items-center" onclick="showAlert()">
+                  <span>Subscribe</span>
+                  <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+          </div>
+      </div>
+      <!-- Custom Alert Box -->
+        <div id="customAlert" class="fixed inset-0 bg-gray-300 bg-opacity-80 flex items-center justify-center hidden">
+          <div class="bg-blue-500 text-white p-6 rounded-lg flex items-center space-x-4">
+              <i class="fas fa-check-circle text-3xl"></i>
+              <span class="text-lg font-bold">Subscribe Success!</span>
+          </div>
+        </div>
+
+<script>
+function showAlert() {
+    const alertBox = document.getElementById('customAlert');
+    alertBox.classList.remove('hidden');
+
+    // Automatically hide the alert box after 3 seconds
+    setTimeout(() => {
+        alertBox.classList.add('hidden');
+    }, 3000);
+}
+</script>
+      <!-- Column 3: Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Information</h2>
+          <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Support Centrum</a></li>
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Blogs</a></li>
+              <li><a href="#" class="hover:underline">Size Measurement Guide</a></li>
+              <li><a href="#" class="hover:underline">Track Order</a></li>
+              <li><a href="#" class="hover:underline">Customer Video Reviews</a></li>
+              <li><a href="#" class="hover:underline">Wholesale / B2B</a></li>
+              <li><a href="#" class="hover:underline">Refer a Friend</a></li>
+              <li><a href="#" class="hover:underline">WeForest Donations</a></li>
+          </ul>
+      </div>
+
+      <!-- Column 4: More Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">More Information</h2>
+          <ul class="space-y-2">
+              <li><a href="/about.html" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+              <li><a href="#" class="hover:underline">Return Policy</a></li>
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" class="hover:underline">Shipping Policy</a></li>
+              <li><a href="#" class="hover:underline">Payment Policy</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="my-4 border border-b-1 border-gray-50"></div>
+    <div class="text-center">
+      <i class="fas fa-globe"></i> Copyright © 2024 Bullmantrading
+    </div>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+<script>
+  function openLoginModal() {
+      document.getElementById('loginModal').classList.remove('hidden');
+  }
+  
+  function closeLoginModal() {
+      document.getElementById('loginModal').classList.add('hidden');
+  }
+  </script>
+<script>
+//  navbar mobile view
+const navToggle = document.getElementById('navToggle');
+ const mobileMenu = document.getElementById('mobileMenu');
+
+ navToggle.addEventListener('click', () => {
+   mobileMenu.classList.toggle('hidden');
+ });
+</script>
+<!-- Script for tab functionality -->
+<script>
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Hide all content
+      tabContents.forEach(content => content.classList.add('hidden'));
+
+      // Remove active state from all buttons
+      tabButtons.forEach(btn => btn.classList.remove('bg-blue-600'));
+      tabButtons.forEach(btn => btn.classList.remove('text-white'));
+
+      // Show the related content and add active state
+      document.getElementById(button.getAttribute('data-target')).classList.remove('hidden');
+      button.classList.add('bg-blue-600');
+      button.classList.add('text-white');
+    });
+  });
+</script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
