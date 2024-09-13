@@ -1,0 +1,153 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+.carousel-wrapper {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+}
+.carousel-item {
+  flex: 1 0 100%;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.carousel-content {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+.carousel-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.card-top{
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -50px;
+  z-index: 99999;
+}
+
+@media (min-width: 320px) and (max-width: 989px)  {
+  .card-top{
+    margin-top: 20px; 
+  }
+  }
+
+.section-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+.section-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    /* min-height: 300px; */
+}
+.section-content {
+    flex: 1;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+.card-content {
+  padding: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  height: 20vh; /* Set height to full viewport height */
+}
+
+.background-section {
+  position: relative;
+  background-image: url('../img/banner.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 300px; /* Adjust height as needed */
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  padding: 20px;
+}
+.button-group {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+.testimonial-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: scale(1.05);
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.author-image {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}

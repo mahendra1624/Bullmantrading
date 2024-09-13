@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullmantrading Trading</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans">
+  <!-- Header Section -->
+  <div class="">
+    <header class="bg-gray-200 py-2 hidden md:flex justify-between items-center px-4">
+      <div class="flex items-center mx-12">
+        <i class="fas fa-phone-alt mr-2"></i>
+        <span>+123-456-7890</span>
+      </div>
+      <div class="flex items-center">
+        <i class="fas fa-envelope mr-2"></i>
+        <span>info@bullmantrading.com</span>
+      </div>
+      <div class="flex items-center space-x-4 p-4 mx-12">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </header>
+  </div>
+  
+  <!-- Navbar Section -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold text-gray-600">Bullmantrading</h1>
+          <!-- <img src="logo.png" alt="Logo" class="h-10"> -->
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="hover:text-green-500">Home</a>
+          <a href="#" class="hover:text-green-500">About</a>
+          <a href="#" class="hover:text-green-500">Service</a>
+          <a href="#" class="hover:text-green-500">Pricing</a>
+          <a href="#" class="hover:text-green-500">Payment</a>
+          <a href="#" class="hover:text-green-500">Disclaimer</a>
+          <a href="#" class="hover:text-green-500">Contact Us</a>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="text-green-600 hover:text-green-500 mr-4">LOGIN</a>
+          <!-- Hamburger Icon for Mobile -->
+          <button class="md:hidden block text-green-600 focus:outline-none" id="navToggle">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobileMenu">
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Home</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">About</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Service</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Pricing</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Payment</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Disclaimer</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Contact Us</a>
+    </div>
+  </nav>
+
+ <!-- Carousel Section -->
+ <div class="carousel-container">
+  <div id="carousel" class="carousel-wrapper">
+      <div class="carousel-item" style="background-image: url('./img/slider-1.jpg');">
+          <div class="carousel-content mt-4 lg:py-16">
+              <h2 class="lg:max-w-xl max-w-lg lg:text-4xl text-xl font-bold">Right Product,Right Place,Right Time</h2>
+              <p class="lg:max-w-2xl max-w-md lg:text-lg text-sm mt-2">Reduce the risk of manual order when
+                placing order, AWS Servers automated trade monitoring excellent risk management.</p>
+              <button class="carousel-button bg-blue-400 mt-2 rounded-xl hover:bg-blue-600">View Services</button>
+          </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('./img/slider-2.jpg');">
+          <div class="carousel-content mt-4 lg:py-16">
+              <h2 class="lg:max-w-xl max-w-lg lg:text-4xl text-xl font-bold">Leveling Financial Freedom to Pave You Future in Algo</h2>
+              <p class="lg:max-w-2xl max-w-md lg:text-lg text-sm mt-2">We provide greatest Algo Trading
+                Software in India at your fingertips, you can elevate your Trade at new heights.</p>
+              <button class="carousel-button bg-blue-400 mt-2 rounded-xl hover:bg-blue-600">View Services</button>
+          </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('./img/slider-3.jpg');">
+          <div class="carousel-content mt-4 lg:py-16">
+              <h2 class="lg:max-w-xl max-w-lg lg:text-4xl text-xl font-bold">100% Automated Trading Custom Algorithm Development</h2>
+              <p class="lg:max-w-2xl max-w-md lg:text-lg text-sm mt-2">Fully Automated API Based Trading System</p>
+              <button class="carousel-button bg-blue-400 mt-2 rounded-xl hover:bg-blue-600">View Services</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Cards Section -->
+<section class="mx-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Card 1 -->
+    <div class="card z-40 card-top bg-gray-900 rounded-lg p-4">
+      <i class="fas fa-comments fa-2x text-green-500 mr-4"></i>
+      <div class="text-white">
+        <h2 class="text-xl font-bold">24/7 Support Team</h2>
+        <p class="mt-2">Our Support Team Always Ready To Help You..</p>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card z-40 card-top bg-gray-900 rounded-lg p-4">
+      <i class="fas fa-comments fa-2x text-green-500 mr-4"></i>
+      <div class="text-white">
+        <h2 class="text-xl font-bold">Quality Services</h2>
+        <p class="mt-2">Fully Automated Mechanical Functionally..</p>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card z-40 card-top bg-gray-900 rounded-lg p-4">
+      <i class="fas fa-comments fa-2x text-green-500 mr-4"></i>
+      <div class="text-white">
+        <h2 class="text-xl font-bold">Budget Friendly</h2>
+        <p class="mt-2">Trades executed at the best possible price.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16">
+  <div class="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div>
+      <img src="./img/trade-api.png" />
+    </div>
+    <div>
+      <h5 class="text-lg font-bold text-blue-400 mb-4">WHO WE ARE</h5>
+      <h2 class="text-5xl font-bold mb-4">ABOUT</h2>
+      <p class="text-md">Bullmantrading is always better than manual Trading. Bullmantrading is completely automated trading that does not require human input. The fact that it is an emotionless kind of trading is crucial since,in most cases,emotions cause us to lose money. Our web-based Bullmantrading terminal partnerships with the leading brokers of India who offer API-Based Trading Service. With this really basic technique, you can stop constantly staring at charts and free up a lot of time to work on other projects.Based on a web browser, Bullmantrading is the first auto robot trading terminal in India. The greatest Bullmantrading systems, such Money Machine and Eagle Trading, are already installed upon it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-800">
+  <div class="max-w-7xl mx-auto">
+    <div>
+      <h2 class="text-lg font-bold text-blue-400 mb-4 text-center">OUR RATIOS</h2>
+      <h3 class="text-3xl font-bold mb-4 text-center text-white">WE ALWAYS TRY TO UNDERSTAND CUSTOMERS EXPECTATION</h3>
+    </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="icon-container mt-6">
+          <i class="fas fa-smile text-4xl text-white"></i>  
+      </div>
+      <div class="icon-container mt-6">
+          <i class="fas fa-note-sticky text-4xl text-white"></i>
+      </div>
+      <div class="icon-container mt-6">
+          <i class="fas fa-users text-4xl text-white"></i>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-bold text-white">50041</h2>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-bold text-white">26212</h2>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-bold text-white">12566</h2>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-normal text-white">HAPPY CUSTOMERS</h2>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-normal text-white">WEB VISITORS</h2>
+      </div>
+      <div class="icon-container">
+        <h2 class="text-3xl font-normal text-white">CALL BACK REQUEST</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-12">
+  <div>
+    <h3 class="text-lg font-bold text-blue-400 mb-4 text-center">WHY CHOOSE US</h3>
+    <h2 class="text-3xl font-bold mb-4 text-center">Our Special Features</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="card">
+        <div class="card-image" style="background-image: url('./img/feature1.jpg');"></div>
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2"> AUTOMATED FUNCTIONING </h3>
+            <p>Automated Buy And Sell Signal With Targte.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image" style="background-image: url('./img/feature3.jpg');"></div>
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2">MARKETS AND INSTRUMENTS</h3>
+            <p>Best indicators for market analysis.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-image" style="background-image: url('./img/feature4.jpg');"></div>
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2">STRATEGY DEVELOPMENT</h3>
+            <p>We develop your strategy with our code.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-12">
+  <div>
+    <h3 class="text-lg font-bold text-blue-400 mb-4 text-center">WHY CHOOSE US</h3>
+    <h2 class="text-3xl font-bold mb-4 text-center">Our Special Features</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="card">
+        <!-- <div class="card-image" style="background-image: url('./img/feature1.jpg');"></div> -->
+        <img src="./img/se-icon4.png" class="h-24 w-24 p-4" />
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2"> API Bridge </h3>
+            <p>API Bridge is a set of programming interface, pincode and Places is first programming interface. APIBridge permits you to algo trade.</p>
+        </div>
+    </div>
+    <div class="card">
+        <!-- <div class="card-image" style="background-image: url('./img/feature3.jpg');"></div> -->
+        <img src="./img/se-icon5.png" class="h-24 w-24 p-4" />
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2">Algo trading</h3>
+            <p>Being Strategic, Our developer is sufficiently skilled to trick the software and have the necessary programming.</p>
+        </div>
+    </div>
+    <div class="card">
+        <!-- <div class="card-image" style="background-image: url('./img/feature4.jpg');"></div> -->
+        <img src="./img/se-icon6.png" class="h-24 w-24 p-4" />
+        <div class="card-content">
+            <h3 class="text-xl font-semibold mb-2">Auto buy and sell signals</h3>
+            <p>We use MetaTrader Software to make automated trading softwares and financial market indicators.If you are growing.</p>
+        </div>
+    </div>
+  </div>
+  <div class="button-container">
+    <button class="border border-blue-600 bg-blue-600 text-white px-6 py-3 rounded">
+        More Services
+    </button>
+</div>
+</section>
+<div class="background-section">
+  <div class="overlay-content">
+      <h2 class="max-w-4xl text-5xl font-bold mb-4">What type of challenge are you facing?
+        Let’s talk</h2>
+      <div class="button-group">
+          <button class="bg-blue-600 text-white px-6 py-3 rounded">info@bullmantrading.com</button>
+          <button class="bg-green-600 text-white px-6 py-3 rounded">+123-456-7890</button>
+      </div>
+  </div>
+</div>
+<section class="p-10">
+  <h2 class="text-xl font-bold text-blue-400 text-center mb-4">OUR TESTIMONIALS</h2>
+  <h2 class="text-4xl font-bold text-center mb-8">Loved by our Clients</h2>
+  <div id="testimonials" class="testimonial-container">
+  </div>
+</section>
+<!-- footer start -->
+<footer class="bg-[#212529] text-white pt-12">
+  <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 px-6">
+
+      <!-- Column 1: Logo & Info -->
+      <div class="col-span-2">
+        <h1 class="text-3xl font-bold text-gray-200 mb-4">Bullmantrading</h1>          
+          <p>Being Strategic, Our developer is sufficiently skilled to trick the software and have the necessary programming and well back testing capacity. 👣</p>
+          <p class="mt-4 flex items-center">
+              <i class="fas fa-envelope mr-2"></i> info@bullmantrading.com
+          </p>
+          <p class="mt-2 flex items-center">
+              <i class="fas fa-phone-alt mr-2"></i> +1 (332) 334-6932
+          </p>
+      </div>
+
+      <!-- Column 2: Newsletter -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Newsletter</h2>
+          <p class="mb-4">Be the first to access new product drops, exclusive promotions, and exciting giveaways!</p>
+          <div class="flex items-center">
+              <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-md w-full focus:outline-none">
+              <button class="bg-gray-800 text-white px-4 py-2 rounded-r-md flex items-center">
+                  <span>Subscribe</span>
+                  <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+          </div>
+      </div>
+
+      <!-- Column 3: Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Information</h2>
+          <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Support Centrum</a></li>
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Blogs</a></li>
+              <li><a href="#" class="hover:underline">Size Measurement Guide</a></li>
+              <li><a href="#" class="hover:underline">Track Order</a></li>
+              <li><a href="#" class="hover:underline">Customer Video Reviews</a></li>
+              <li><a href="#" class="hover:underline">Wholesale / B2B</a></li>
+              <li><a href="#" class="hover:underline">Refer a Friend</a></li>
+              <li><a href="#" class="hover:underline">WeForest Donations</a></li>
+          </ul>
+      </div>
+
+      <!-- Column 4: More Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">More Information</h2>
+          <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+              <li><a href="#" class="hover:underline">Return Policy</a></li>
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" class="hover:underline">Shipping Policy</a></li>
+              <li><a href="#" class="hover:underline">Payment Policy</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="my-4 border border-b-1 border-gray-50"></div>
+    <div class="text-center">
+      <i class="fas fa-globe"></i> Copyright © 2024 Bullmantrading
+    </div>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+<script>
+  const testimonials = [
+      { text: 'Bullmantrading let us develop, test and implement systematic strategies for [Trading] so that we can quickly identify market dislocations.We are satisfied with the solution given.', author: "Rahul Kumar", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Ashok Kumar", image: "./img/user.png" },
+      { text: "Bullmantrading let us develop, test and implement systematic strategies for Trading so that we can quickly identify market dislocations.We are satisfied with the solution given.", author: "Raju Kumar", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Michael Brown", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Sarah Davis", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "David Wilson", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Laura Taylor", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Chris Anderson", image: "./img/user.png" },
+      { text: "Good Team support I have experienced in Bullmantrading. I learned One strategy for safe trade in my learning session with market expert .Information was accurate !", author: "Olivia Martinez", image: "./img/user.png" }
+  ];
+
+  const testimonialsContainer = document.getElementById('testimonials');
+
+  function createCard(text, author, image) {
+      return `
+          <div class="testimonial-card">
+              <p class="text-lg mb-4">${text}</p>
+              <div class="author">
+                  <img src="${image}" alt="${author}" class="author-image">
+                  <p class="font-semibold">${author}</p>
+              </div>
+          </div>
+      `;
+  }
+
+  function displayTestimonials(startIndex, endIndex) {
+      testimonialsContainer.innerHTML = testimonials.slice(startIndex, endIndex).map(t => createCard(t.text, t.author, t.image)).join('');
+  }
+
+  // Display the first three testimonials
+  displayTestimonials(0, 3);
+
+  // Hide all testimonials after 5 seconds and show the next three
+  setTimeout(() => {
+      testimonialsContainer.style.opacity = '0'; // Fade out effect
+      setTimeout(() => {
+          displayTestimonials(3, 6);
+          testimonialsContainer.style.opacity = '1'; // Fade in effect
+
+          // Show the remaining three testimonials after another 5 seconds
+          setTimeout(() => {
+              displayTestimonials(6, 9);
+          }, 5000); // Show remaining testimonials after 5 seconds
+      }, 500); // Short delay for fade-out transition
+  }, 5000); // Initial 5 seconds delay for first update
+</script>
+<script>
+ 
+ const carousel = document.getElementById('carousel');
+  let currentIndex = 0;
+  const totalItems = 3; // Number of slides
+
+  function showSlide(index) {
+      const offset = -index * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      showSlide(currentIndex);
+  }, 10000);
+
+
+//  navbar mobile view
+const navToggle = document.getElementById('navToggle');
+ const mobileMenu = document.getElementById('mobileMenu');
+
+ navToggle.addEventListener('click', () => {
+   mobileMenu.classList.toggle('hidden');
+ });
+</script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
