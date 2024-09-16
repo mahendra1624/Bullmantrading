@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullmantrading Trading</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="./js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans"> 
+  <!-- Navbar Section -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold text-gray-600">Bullmantrading</h1>
+          <!-- <img src="logo.png" alt="Logo" class="h-10"> -->
+        </div>
+        <div class="hidden md:flex space-x-6">
+          <a href="/" class="hover:text-green-500">Home</a>
+          <a href="/about.html" class="hover:text-green-500">About</a>
+          <a href="/sevice.html" class="hover:text-green-500">Service</a>
+          <a href="/pricing.html" class="hover:text-green-500">Pricing</a>
+          <a href="#" class="hover:text-green-500">Payment</a>
+          <a href="#" class="hover:text-green-500">Disclaimer</a>
+          <a href="/contact.html" class="hover:text-green-500">Contact Us</a>
+        </div>
+        <div class="flex items-center">
+          <a href="#" class="text-green-600 hover:text-green-500 mr-4" onclick="openLoginModal()">LOGIN</a>
+          <!-- Hamburger Icon for Mobile -->
+          <button class="md:hidden block text-green-600 focus:outline-none" id="navToggle">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center hidden">
+  <div class="bg-white p-6 rounded-lg max-w-md w-full">
+      <!-- Company Name -->
+      <h2 class="text-2xl font-bold mb-4 text-center text-blue-700">Bullmantrading</h2>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+          <div class="mb-4">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+              <input id="email" type="email" placeholder="Enter your email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="mb-6">
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+              <input id="password" type="password" placeholder="Enter your password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+          </div>
+          <div class="flex items-center justify-between">
+              <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                  Log In
+              </button>
+              <a class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-green-600" href="#">
+                  Forgot Password?
+              </a>
+          </div>
+      </form>
+
+      <!-- Close Button -->
+      <div class="mt-4 text-center">
+          <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onclick="closeLoginModal()">Close</button>
+      </div>
+  </div>
+</div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobileMenu">
+      <a href="/" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Home</a>
+      <a href="/about.html" class="block px-4 py-2 text-green-600 hover:bg-gray-100">About</a>
+      <a href="/sevice.html" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Service</a>
+      <a href="/pricing.html" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Pricing</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Payment</a>
+      <a href="#" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Disclaimer</a>
+      <a href="/contact.html" class="block px-4 py-2 text-green-600 hover:bg-gray-100">Contact Us</a>
+    </div>
+  </nav>
+
+  <div class="relative h-screen bg-cover bg-center" style="background-image: url('./img/bull-bear1.jpeg');">
+    <!-- Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Centered Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-white">
+        <!-- Contact Us Content -->
+        <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+        <!-- Navigation Links -->
+        <nav class="text-lg">
+            <a href="/" class="hover:text-gray-400">Home</a> / 
+            <a href="/contact.html" class="hover:text-gray-400">Contact Us</a>
+        </nav>
+    </div>
+  </div>
+  <section>
+    <div>
+      <h2 class="text-center text-3xl text-blue-400 font-bold py-4 underline">Contact Us</h2>
+      <p class="text-lg leading-[35px] mx-6 mb-4 text-center">Want to schedule a visit or consultation? Use the form below to request an appointment, and we’ll confirm your booking shortly.</p>
+    </div>
+  </section>
+  <section>
+    <div class="max-w-5xl mx-auto mb-8 p-6 bg-gray-100 border border-1 border-gray-300 mt-10 shadow-lg rounded-lg">
+      <div id="successMessage" class="hidden text-green-600 mb-4">
+        Form submitted successfully!
+    </div>
+      <form>
+          <!-- First Name and Last Name in one row -->
+          <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="py-4">
+                  <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                  <input type="text" id="firstName" placeholder="First Name" class="mt-1 p-2 block w-full border-gray-600 rounded-md shadow-lg focus:ring-indigo-500 focus:border-indigo-500">
+              </div>
+              <div class="py-4">
+                  <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                  <input type="text" id="lastName" placeholder="Last Name" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-lg focus:ring-indigo-500 focus:border-indigo-500">
+              </div>
+          </div>
+
+          <!-- Email in one row -->
+          <div class="mb-4">
+              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" id="email" placeholder="Email" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-lg focus:ring-indigo-500 focus:border-indigo-500">
+          </div>
+
+          <!-- Phone in one row -->
+          <div class="mb-4">
+              <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+              <input type="tel" id="phone" placeholder="Phone Number" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-lg focus:ring-indigo-500 focus:border-indigo-500">
+          </div>
+
+          <!-- Message Text Field in one row -->
+          <div class="mb-4">
+              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" rows="4" placeholder="Your Message" class="mt-1 p-2 block w-full border-gray-300 rounded-md shadow-lg focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+          </div>
+
+          <!-- Submit Button in one row -->
+          <div class="flex items-center justify-center">
+              <button type="submit" class="bg-indigo-600 text-white py-2 px-4 rounded-md shadow-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" onclick="showAlert_contact()">
+                  Submit
+              </button>
+          </div>
+      </form>
+      <div id="customAlert-contact" class="fixed inset-0 bg-gray-300 bg-opacity-80 flex items-center justify-center hidden">
+        <div class="bg-blue-500 text-white p-6 rounded-lg flex items-center space-x-4">
+            <i class="fas fa-check-circle text-3xl"></i>
+            <span class="text-lg font-bold">Form submit Success!</span>
+        </div>
+      </div>
+      <script>
+        function showAlert_contact() {
+            const alertBox = document.getElementById('customAlert-contact');
+            alertBox.classList.remove('hidden');
+        
+            // Automatically hide the alert box after 5 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 15000);
+        }
+        </script>
+  </div>
+  </section>
+
+<!-- footer start -->
+<footer class="bg-[#212529] text-white pt-12">
+  <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 px-6">
+
+      <!-- Column 1: Logo & Info -->
+      <div class="col-span-2">
+        <h1 class="text-3xl font-bold text-gray-200 mb-4">Bullmantrading</h1>          
+          <p>Being Strategic, Our developer is sufficiently skilled to trick the software and have the necessary programming and well back testing capacity. 👣</p>
+      </div>
+
+      <!-- Column 2: Newsletter -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Newsletter</h2>
+          <p class="mb-4">Be the first to access new product drops, exclusive promotions, and exciting giveaways!</p>
+          <div class="flex items-center">
+              <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l-md w-full focus:outline-none">
+              <button class="bg-gray-800 text-white px-4 py-2 rounded-r-md flex items-center" onclick="showAlert()">
+                  <span>Subscribe</span>
+                  <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+          </div>
+      </div>
+      <!-- Custom Alert Box -->
+        <div id="customAlert" class="fixed inset-0 bg-gray-300 bg-opacity-80 flex items-center justify-center hidden">
+          <div class="bg-blue-500 text-white p-6 rounded-lg flex items-center space-x-4">
+              <i class="fas fa-check-circle text-3xl"></i>
+              <span class="text-lg font-bold">Subscribe Success!</span>
+          </div>
+        </div>
+
+<script>
+function showAlert() {
+    const alertBox = document.getElementById('customAlert');
+    alertBox.classList.remove('hidden');
+
+    // Automatically hide the alert box after 5 seconds
+    setTimeout(() => {
+        alertBox.classList.add('hidden');
+    }, 5000);
+}
+</script>
+      <!-- Column 3: Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">Information</h2>
+          <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">Support Centrum</a></li>
+              <li><a href="#" class="hover:underline">FAQ</a></li>
+              <li><a href="#" class="hover:underline">Blogs</a></li>
+              <li><a href="#" class="hover:underline">Size Measurement Guide</a></li>
+              <li><a href="#" class="hover:underline">Track Order</a></li>
+              <li><a href="#" class="hover:underline">Customer Video Reviews</a></li>
+              <li><a href="#" class="hover:underline">Wholesale / B2B</a></li>
+              <li><a href="#" class="hover:underline">Refer a Friend</a></li>
+              <li><a href="#" class="hover:underline">WeForest Donations</a></li>
+          </ul>
+      </div>
+
+      <!-- Column 4: More Information -->
+      <div class="col-span-1">
+          <h2 class="text-lg font-bold mb-4">More Information</h2>
+          <ul class="space-y-2">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+              <li><a href="#" class="hover:underline">Return Policy</a></li>
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" class="hover:underline">Shipping Policy</a></li>
+              <li><a href="#" class="hover:underline">Payment Policy</a></li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="my-4 border border-b-1 border-gray-50"></div>
+    <div class="text-center">
+      <i class="fas fa-globe"></i> Copyright © 2024 Bullmantrading
+    </div>
+    </div>
+  </div>
+</footer>
+<!-- footer end -->
+<script>
+  function openLoginModal() {
+      document.getElementById('loginModal').classList.remove('hidden');
+  }
+  
+  function closeLoginModal() {
+      document.getElementById('loginModal').classList.add('hidden');
+  }
+  </script>
+<script>
+
+//  navbar mobile view
+const navToggle = document.getElementById('navToggle');
+ const mobileMenu = document.getElementById('mobileMenu');
+
+ navToggle.addEventListener('click', () => {
+   mobileMenu.classList.toggle('hidden');
+ });
+</script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
